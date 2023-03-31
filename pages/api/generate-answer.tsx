@@ -23,7 +23,7 @@ export default async function handler(
     const prompt = req.body.prompt;
 
     if(!prompt || prompt == ''){
-        return new Response('Mohon kirim pertanyaanmu', {status:  400})
+        return new Response('Please send your prompt', {status:  400})
     }
     const aiResult = await openai.createCompletion({
         model: 'text-davinci-003',

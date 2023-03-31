@@ -129,7 +129,8 @@ export default function Home() {
   }
 
   return (
-    <main className="relative max-w-2xl mx-auto mt-0">
+    <>
+    <main className="relative max-w-2xl mx-auto mt-0 min-h-screen">
       <div className="sticky top-0 w-full pt-10 px-4 bg-gray-800">
         <ChatInput onSend={(input) => callApi(input)} disabled={loading} />
       </div>
@@ -141,6 +142,10 @@ export default function Home() {
         {messages.length == 0 && <h1 className="text-center text-gray-400"><span>Bersedia melayani mu!</span></h1>}
       </div>
     </main>
+     <div className="text-center mt-auto">
+        <h1 className='text-gray-200'>Made by <a href='https://github.com/FadilArfat' className='text-blue-300'>@FXDL</a> Powered with OpenAI</h1>
+      </div>
+    </>
   );
 }
   
