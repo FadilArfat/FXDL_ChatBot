@@ -12,7 +12,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className='bg-gray-800  min-h-screen'>{children}</body>
+      <footer className='text-center mt-auto'>
+        <h1 className='text-gray-200'>Made by <a href='https://github.com/FadilArfat' className='text-blue-300'>@FXDL</a> Powered with OpenAI</h1>
+      </footer>
     </html>
   )
 }
